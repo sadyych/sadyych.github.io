@@ -103,11 +103,64 @@ img {
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 30px;
 }
 
+.wrapper {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 1230px) {
+  .container {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .container {
+    max-width: 740px;
+  }
+  .skills__png {
+    max-width: 50%;
+  }
+  .skills__figma {
+    max-height: 83px;
+  }
+  .skills__svg {
+    max-width: 75%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .container {
+    max-width: 640px;
+  }
+  .skills__png {
+    max-width: 50%;
+  }
+  .skills__figma {
+    max-height: 72px;
+  }
+  .skills__svg {
+    max-width: 75%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .container {
+    max-width: 540px;
+  }
+  .skills__png {
+    max-width: 50%;
+  }
+  .skills__figma {
+    max-height: 60px;
+  }
+  .skills__svg {
+    max-width: 75%;
+  }
+}
 .header {
   background-color: #fff;
   border-bottom: 1px solid #000;
@@ -160,8 +213,7 @@ img {
 
 .name {
   color: #070707;
-  width: 123px;
-  height: 118px;
+  max-width: 123px;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -180,9 +232,6 @@ img {
 }
 
 .about-me {
-  background-color: #f6f6f6;
-  margin: 0 auto;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,14 +310,6 @@ img {
   text-align: center;
   max-width: 70px;
   max-height: 84px;
-}
-
-.skills__png {
-  max-width: 90px;
-}
-
-.skills__svg {
-  max-width: 165px;
 }
 
 .portfolio {
