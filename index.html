@@ -11,7 +11,9 @@
 
 
 <body>
-   <div class="wrapper">
+
+
+   <header>
       <div class="container">
          <nav class="header">
             <ul class="header-list">
@@ -32,7 +34,11 @@
                </li>
             </ul>
          </nav>
-         <div class="main-info" id="HomeSect">
+      </div>
+   </header>
+   <main>
+      <div class="container">
+         <section class="main-info" id="HomeSect">
             <div class="main-info__text">
                <h1 class="name">Denis Novik</h1>
                <p class="short-info">Front-end developer
@@ -40,77 +46,65 @@
             </div>
 
             <img class="main-info__photo" src="/img/denis.jpg" alt="">
-         </div>
+         </section>
+      </div>
+      <section class="about-me" id="AboutmeSect">
 
-         <div class="about-me" id="AboutmeSect">
-            <h2 class="about-me__h2">About me</h2>
-            <p class="about-me__text">
-               Hi, I'm Denis – UX/UI designer from Minsk. <br>
-               I'm interested in design and everything connected with it. <br> <br>
-               I'm studying at courses "Web and mobile design <br>
-               interfaces" in IT-Academy. <br> <br>
-               Ready to implement excellent projects <br>
-               with wonderful people.
-            </p>
-         </div>
-         <div class="skills" id="skillsSect">
+         <h2 class="about-me__h2">About me</h2>
+         <p class="about-me__text">
+            Hi, I'm Denis – UX/UI designer from Minsk. <br>
+            I'm interested in design and everything connected with it. <br> <br>
+            I'm studying at courses "Web and mobile design <br>
+            interfaces" in IT-Academy. <br> <br>
+            Ready to implement excellent projects <br>
+            with wonderful people.
+         </p>
+
+      </section>
+      </div>
+      <div class="container">
+         <section class="skills" id="skillsSect">
             <h2 class="skills__h2">Skills</h2>
             <p class="skills__p">I work in such programs as</p>
-            <ul class="programms__icons">
-               <li class="programms__icons__item">
-                  <img src="/img/ps.png" alt="">
+            <ul class="skills__list">
+               <li class="skills__item">
+                  <img class="skills__png" src="/img/ps.png" alt="">
+                  <p class="skills__name">Adobe Photoshop</p>
+                  <img class="skills__svg" src="/img/ps.svg" alt="">
                </li>
-               <li class="programms__icons__item">
-                  <img src="/img/ai.png" alt="">
+               <li class="skills__item">
+                  <img class="skills__png" src="/img/ai.png" alt="">
+                  <p class="skills__name">Adobe Illustrator</p>
+                  <img class="skills__svg" src="/img/ai.svg" alt="">
                </li>
-               <li class="programms__icons__item">
-                  <img src="/img/ae.png" alt="">
+               <li class="skills__item">
+                  <img class="skills__png" src="/img/ae.png" alt="">
+                  <p class="skills__name">Adobe Effects</p>
+                  <img class="skills__svg" src="/img/ae.svg" alt="">
                </li>
-               <li class="programms__icons__item">
-                  <img src="/img/figma.png" alt="">
-               </li>
-            </ul>
-            <ul class="programms">
-               <li class="programms__item programms__photoshop">Adobe Photoshop</li>
-               <li class="programms__item programms__illustrator">Adobe
-                  Illustrator</li>
-               <li class="programms__item programms__after-effects">Adobe
-                  After Effects</li>
-               <li class="programms__item programms__figma">Figma</li>
-            </ul>
-            <ul class="programms__stars">
-               <li class="programms__stars__item">
-                  <img src="/img/ps.svg" alt="">
-               </li>
-               <li class="programms__stars__item">
-                  <img src="/img/ai.svg" alt="">
-               </li>
-               <li class="programms__stars__item">
-                  <img src="/img/ae.svg" alt="">
-               </li>
-               <li class="programms__stars__item">
-                  <img src="/img/figma.svg" alt="">
+               <li class="skills__item">
+                  <img class="skills__png" src="/img/figma.png" alt="">
+                  <p class="skills__name">Figma <br>ㅤㅤ</p>
+                  <img class="skills__svg" src="/img/figma.svg" alt="">
                </li>
             </ul>
-         </div>
-         <div class="portfolio" id="portfolioSect">
-            <h2 class="portfolio__h2">Portfolio</h2>
-            <img class="portfolio1__img" src="/img/portfolio1.jpg" alt="">
-            <p class="portfolio1__text">
-               <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
-            </p>
-            <img class="portfolio2__img" src="/img/portfolio2.jpg" alt="">
-            <p class="portfolio2__text">
-               <a class="portfolio__link" href="#">Reebok Store - Concept</a>
-            </p>
-            <img class="portfolio3__img" src="/img/portfolio3.jpg" alt="">
-            <p class="portfolio3__text">
-               <a class="portfolio__link" href="#">Braun Landing Page - Concept</a>
-            </p>
-         </div>
-         <div class="contacts" id="contactsSect">
+         </section>
+      </div>
+      <section class="portfolio" id="portfolioSect">
+         <h2 class="portfolio__h2">Portfolio</h2>
+         <img class="portfolio1__img" src="/img/portfolio1.jpg" alt="">
+         <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
+         <img class="portfolio2__img" src="/img/portfolio2.jpg" alt="">
+         <a class="portfolio__link" href="#">Reebok Store - Concept</a>
+         <img class="portfolio3__img" src="/img/portfolio3.jpg" alt="">
+         <a class="portfolio__link" href="#">Braun Landing Page - Concept</a>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <section class="contacts" id="contactsSect">
             <h2 class="contacts__h2">Contacts</h2>
-            <p class="contacts__text1">Want to know more or just chat?
+            <p class="contacts__text1">Want to know more or just chat? <br>
                You are welcome!</p>
             <button class="contacts__button"><span>Send message</span></button>
             <ul class="contacts__icons">
@@ -137,9 +131,9 @@
             </ul>
             <p class="contacts__text2">Like me on <br>
                LinkedIn, Instagram, Behance, Dribble</p>
-         </div>
+         </section>
       </div>
-   </div>
+   </footer>
    </div>
 
 </body>

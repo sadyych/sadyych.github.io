@@ -88,11 +88,6 @@ h6 {
 }
 
 /*------------------------------*/
-.wrapper {
-  height: 100%;
-  min-height: 100%;
-}
-
 body {
   font-family: "PT Sans", sans-serif;
 }
@@ -106,7 +101,7 @@ body {
 .header {
   width: 100%;
   height: 84px;
-  background-color: #fff;
+  background-color: #ff0000;
   border-bottom: 1px solid #000;
 }
 
@@ -134,8 +129,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-top: 31px;
-  padding-bottom: 29px;
 }
 
 .main-info {
