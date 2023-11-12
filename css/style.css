@@ -421,7 +421,7 @@ footer {
   transition: 0.3s;
 }
 footer.change-bg-footer {
-  background-color: #b84040;
+  background-color: #b9d8c5;
 }
 
 .contacts {
@@ -451,7 +451,7 @@ footer.change-bg-footer {
 }
 
 .contacts__button {
-  background-color: #000;
+  background-color: #6d8c79;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -460,6 +460,8 @@ footer.change-bg-footer {
   width: 180px;
   height: 42px;
   margin-bottom: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .contacts__button span {
   color: #fff;
@@ -467,6 +469,9 @@ footer.change-bg-footer {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.contacts__button:hover {
+  background-color: #40b86e;
 }
 
 .contacts__icons {

@@ -376,7 +376,7 @@ img {
 footer {
   transition: 0.3s;
   &.change-bg-footer {
-    background-color: #b84040;
+    background-color: #b9d8c5;
   }
 }
 .contacts {
@@ -403,7 +403,7 @@ footer {
   line-height: normal;
 }
 .contacts__button {
-  background-color: #000;
+  background-color: #6d8c79;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -411,6 +411,7 @@ footer {
   width: 180px;
   height: 42px;
   margin-bottom: 50px;
+  transition: 0.3s;
   & span {
     color: #fff;
 
@@ -419,7 +420,12 @@ footer {
     font-weight: 400;
     line-height: normal;
   }
+
+  &:hover {
+    background-color: #40b86e;
+  }
 }
+
 .contacts__icons {
   display: flex;
   justify-content: space-between;
