@@ -95,6 +95,9 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
 }
+body.menu-opened {
+  overflow: hidden;
+}
 
 img {
   max-width: 100%;
@@ -103,13 +106,70 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
-  padding: 0 100px;
+  padding: 0 30px;
 }
 
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+  }
+  .burger__bar {
+    background-color: #000;
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .burger__bar::before {
+    background-color: #000;
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: -16px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    left: 0;
+  }
+  .burger__bar::after {
+    background-color: #000;
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .burger.active .burger__bar {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .burger.active .burger__bar::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+  }
+  .burger.active .burger__bar::after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
 .header {
   background-color: #fff;
   border-bottom: 1px solid #000;
@@ -141,6 +201,42 @@ img {
   line-height: normal;
 }
 
+@media screen and (max-width: 1023px) {
+  .header {
+    border: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    padding-right: 70px;
+    padding-left: 28px;
+    padding-top: 50px;
+  }
+  .header.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header__link {
+    padding: 0;
+    font-size: 34px;
+  }
+  header {
+    padding-top: 50px;
+  }
+  .header-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 68px;
+  }
+}
 .main-info {
   background-color: #fff;
   padding-bottom: 100px;
@@ -200,6 +296,7 @@ img {
   color: #070707;
   font-size: 34px;
   font-style: normal;
+  text-align: center;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 20px;
@@ -207,6 +304,7 @@ img {
 
 .about-me__text {
   color: #070707;
+  text-align: center;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -249,6 +347,10 @@ img {
           justify-content: space-between;
 }
 
+.skills__item {
+  width: 25%;
+}
+
 .skills__name {
   color: #828282;
   font-size: 14px;
@@ -265,6 +367,18 @@ img {
   margin-bottom: 24px;
 }
 
+@media screen and (max-width: 1023px) {
+  .skills__png {
+    height: 70px;
+    width: auto;
+  }
+  .skills__figma {
+    max-height: 83px;
+  }
+  .skills__svg {
+    max-width: 75%;
+  }
+}
 .portfolio {
   background-color: #f6f6f6;
   padding-top: 100px;
@@ -284,6 +398,7 @@ img {
 
 .portfolio__img {
   margin-bottom: 45px;
+  width: 100%;
 }
 
 .portfolio__link {
@@ -301,6 +416,14 @@ img {
   margin-bottom: 0;
 }
 
+footer {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer.change-bg-footer {
+  background-color: #b84040;
+}
+
 .contacts {
   color: #fff;
   padding-bottom: 100px;
@@ -311,6 +434,7 @@ img {
   margin-bottom: 20px;
   color: #070707;
   font-size: 34px;
+  text-align: center;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -320,6 +444,7 @@ img {
   margin-bottom: 30px;
   color: #070707;
   font-size: 18px;
+  text-align: center;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -327,6 +452,10 @@ img {
 
 .contacts__button {
   background-color: #000;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-radius: 70px;
   width: 180px;
   height: 42px;
@@ -359,8 +488,80 @@ img {
 
 .contacts__text2 {
   color: #828282;
+  text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .skills__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .skills__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .main-info__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 30px;
+  }
+  .h1.name,
+  .short-info {
+    text-align: left;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 30px;
+  }
+  .burger::before {
+    background-color: #000;
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .burger::after {
+    background-color: #000;
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .burger__bar {
+    background-color: #000;
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header {
+    border: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+  }
+}
+@media screen and (max-width: 500px) {
+  .skills__item {
+    width: 100%;
+  }
 }
