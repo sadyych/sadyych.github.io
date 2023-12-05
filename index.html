@@ -5,14 +5,18 @@
    <title>Denis Novik</title>
    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
    <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width">
 </head>
 
 
 <body>
-
-
    <header>
       <div class="container">
          <nav class="header">
@@ -41,7 +45,6 @@
       </div>
    </header>
    <main>
-      <!-- <div class="container"> -->
       <section class="main-info" id="HomeSect">
          <div class="container">
             <div class="main-info__text">
@@ -90,7 +93,7 @@
                </li>
                <li class="skills__item">
                   <img class="skills__png skills__figma" src="/img/figma.png" alt="">
-                  <p class="skills__name">Figma <br>ㅤㅤ</p>
+                  <p class="skills__name">Figma</p>
                   <img class="skills__svg" src="/img/figma.svg" alt="">
                </li>
             </ul>
@@ -99,12 +102,22 @@
       <section class="portfolio" id="portfolioSect">
          <div class="container">
             <h2 class="portfolio__h2">Portfolio</h2>
-            <img class="portfolio__img" src="/img/portfolio1.jpg" alt="">
-            <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
-            <img class="portfolio__img" src="/img/portfolio2.jpg" alt="">
-            <a class="portfolio__link" href="#">Reebok Store - Concept</a>
-            <img class="portfolio__img" src="/img/portfolio3.jpg" alt="">
-            <a class="portfolio__link" href="#">Braun Landing Page - Concept</a>
+            <div class="image-slider swiper-container">
+               <div class="image-slider__wrapper swiper-wrapper">
+                  <div class="image-slider__slide swiper-slide">
+                     <img class="image-slider__image swiper-image" src="/img/portfolio1.jpg" alt="Image">
+                     <a class="image-slider__link" href="#">Online fashion store - Homepage</a>
+                  </div>
+                  <div class="image-slider__slide swiper-slide">
+                     <img class="image-slider__image swiper-image" src="/img/portfolio2.jpg" alt="Image">
+                     <a class="image-slider__link" href="#">Reebok Store - Concept</a>
+                  </div>
+                  <div class="image-slider__slide swiper-slide">
+                     <img class="image-slider__image swiper-image" src="/img/portfolio3.jpg" alt="Image">
+                     <a class="image-slider__link" href="#">Braun Landing Page - Concept</a>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
    </main>
@@ -143,5 +156,6 @@
 
 </body>
 <script src="/js/index.js"></script>
+
 
 </html>
