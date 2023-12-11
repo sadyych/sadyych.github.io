@@ -202,9 +202,10 @@ img {
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-
-.header__linkh {
+.header__link:hover {
   color: #000;
 }
 

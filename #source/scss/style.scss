@@ -187,15 +187,19 @@ img {
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: 0.3s;
+
+  &:hover {
+    color: #000;
+  }
 }
-.header__linkh {
-  color: #000;
-}
+
 .header__item {
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
 }
+
 @media screen and (max-width: 1023px) {
   .header {
     border: none;
