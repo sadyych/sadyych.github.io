@@ -1,1 +1,1 @@
-https://sadyych.github.io/
+GitHub Pages: https://sadyych.github.io/
